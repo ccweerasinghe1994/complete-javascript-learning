@@ -8,8 +8,6 @@ function cleanUpArray(array = []) {
   return filteredArray;
 }
 
-console.log(cleanUpArray(temperature));
-
 const mergeTwoArrays = (array_1 = [], array_2 = []) => array_1.concat(array_2);
 
 // what is temperature amplitude?
@@ -21,4 +19,22 @@ const temperatureAmplitude = (array_1 = [], array_2 = []) => {
   return max - min;
 };
 
-console.log(temperatureAmplitude(temperature, temperature));
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+    // fix
+    // value: Number(prompt('Degrees celsius')),
+    value: 12,
+  };
+  // console.log(measurement['value']);
+  // find
+  console.table(measurement);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+
+console.log(measureKelvin());
+
+// identify the bug;
